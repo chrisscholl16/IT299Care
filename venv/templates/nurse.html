@@ -3,40 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CareConnectLite</title>
-    <link rel="stylesheet" href="/static/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+    <title>New Patient Form</title>
 </head>
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top">
-            <a class="navbar-brand" href="/login">CareConnectLite</a>
+            <a class="navbar-brand" href="#">CareConnectLite</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link active" href="/student">Student</a>
-                    <a class="nav-item nav-link active" href="/register">Register</a>
-                    <a class="nav-item nav-link active" href="/login">Login</a>
                     <a class="nav-item nav-link active" href="/nurse">Nurse</a>
+                    <a class="nav-item nav-link active" href="/logout">Logout</a>
                 </div>
             </div>
         </nav>
     </div>
     <div class="container">
-    <header class="py-5" style="background: url('/static/images/nurse.jpeg') no-repeat center center; background-size: cover; min-height: 60vh;">
-        <div class="container h-100 d-flex align-items-center justify-content-center text-center py-5">
-            <div class="row">
-            <div class="col-lg-8 mx-auto  p-4 rounded" style="background-color: rgba(255, 255, 255, 0.75);">
-                <h1 class="display-2 fw-bold mb-3" style="color: black;">Welcome to CareConnectLite</h1>
-                <p class="lead" style="color: black;">Please login or register now!!!</p>
+        <header class="bg-transparent text-dark py-5" style="background: url('/static/images/nurse.jpeg') no-repeat center center; color: black; background-size: cover; min-height: 60vh;">
+            <div class="container h-100 d-flex align-items-center justify-content-center text-center py-5">
+                <div class="row">
+                <div class="col-lg-8 mx-auto text-dark p-4 rounded" style="background-color: rgba(255, 255, 255, 0.75);">
+                    <h1 class="display-2 fw-bold mb-3" style="color: black;">Welcome to "nurse's name" to your dashboard"</h1>
+                </div>
+                </div>
             </div>
-            </div>
-        </div>
-    </header>
+        </header>
     </div>
     <div class="container">
         <figcaption>
@@ -44,19 +39,10 @@
         </figcaption>
     </div>
     <div class="container text-center">
-        <h1>CareConnectLite HomePage</h1>
-        <a href="{{url_for('login')}}">Login Page</a><br>
-        <a href="{{url_for('register')}}">Register Page</a>
+        <h1>New Patient Form here</h1>
     </div>
-    <div class="container my-4">
-        <div class="row">
-            <div class="col-md-6">
-            <div class="p-4 border bg-light"><button type="button" class="btn btn-white"><a href="{{url_for('login')}}">Login Page</a></button></div>
-            </div>
-            <div class="col-md-6">
-            <div class="p-4 border bg-light"><button type="button" class="btn btn-white"><a href="{{url_for('register')}}">Register Page</a></button></div>
-            </div>
-        </div>
+    <div class="container text-center">
+        <h1>Past Client list here</h1>
     </div>
     <div class="container">
         <footer class="text-center bg-info">
