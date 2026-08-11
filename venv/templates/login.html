@@ -45,6 +45,20 @@
         <p>Don't have an account? <a href="{{url_for('register')}}">Sign up here</a></p>
     </div>
     <div class="container">
+        <form method="POST">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                    </form>
+    </div>
+    <br>
+    <div class="container">
         <footer class="text-center bg-info">
             <p>&copy; 2026 Chris Scholl Web Design. All rights reserved.<a href="https://www.linkedin.com/in/chris-scholl-webdesigner" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
         </footer>

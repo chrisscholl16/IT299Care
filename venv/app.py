@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 
@@ -10,6 +10,9 @@ app.config['SECRET_KEY'] = 'thisisasecretkey'
 
 db = SQLAlchemy(app)
 
+DEMO_USER = "admin"
+DEMO_PASS = "password"
+
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), nullable=False)
@@ -19,9 +22,22 @@ class User(db.Model, UserMixin):
 def index():
     return render_template('index.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')
+    error = None
+    if request.method == 'POST':
+        # Retrieve data from the HTML form 'name' attributes
+        username = request.form.get('username')
+        password = request.form.get('password')
+        
+        # Validate credentials
+        if username == DEMO_USER and password == DEMO_PASS:
+            return f"<h1>Welcome, {username}! Login successful.</h1>"
+        else:
+            error = "Invalid username or password. Please try again."
+            
+    # Render the login template (passes an error variable if validation failed)
+    return render_template('login.html', error=error)
 
 @app.route('/register')
 def register():
