@@ -10,8 +10,8 @@ app.config['SECRET_KEY'] = 'thisisasecretkey'
 
 db = SQLAlchemy(app)
 
-DEMO_USER = "admin"
-DEMO_PASS = "password"
+USER = "admin"
+PASS = "password"
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
@@ -31,7 +31,7 @@ def login():
         password = request.form.get('password')
         
         # Validate credentials
-        if username == DEMO_USER and password == DEMO_PASS:
+        if username == USER and password == PASS:
             return f"<h1>Welcome, {username}! Login successful.</h1>"
         else:
             error = "Invalid username or password. Please try again."

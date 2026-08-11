@@ -44,6 +44,29 @@
         <h1>CareConnectLite Register</h1>
         <p>Already have an account?<a href="{{url_for('login')}}"> Login here</a></p>
     </div>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 bg-light p-5 rounded shadow-sm">
+                <h2 class="mb-4">Register</h2>
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password2" class="form-label">Password</label>
+                            <input type="password2" class="form-control" id="password2" name="password2" placeholder="Confirm password" required>
+                        </div>
+                        <button type="submit" class="btn btn-info w-100">Sign Up</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <br>
     <div class="container">
         <footer class="text-center bg-info">
             <p>&copy; 2026 Chris Scholl Web Design. All rights reserved.<a href="https://www.linkedin.com/in/chris-scholl-webdesigner" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
